@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP5</title>
+    <style>
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .gallery img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script>
+    function enviarFormulario() {
+      alert("Se envió correctamente");
+    }
+  </script>
+  <body>
+    <ul style="list-style-type: none; padding: 0; margin: 0">
+      <li style="display: inline-block; margin-right: 10px">
+        <a href="#inicio">Inicio</a>
+      </li>
+      <li style="display: inline-block; margin-right: 10px">
+        <a href="#acerca">Acerca</a>
+      </li>
+      <li style="display: inline-block; margin-right: 10px">
+        <a href="#servicios">Servicios</a>
+      </li>
+      <li style="display: inline-block; margin-right: 10px">
+        <a href="#contacto">Contacto</a>
+      </li>
+    </ul>
+    <h1>ENCABEZADO</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempore
+      accusantium eos possimus minus consequatur labore et, assumenda ad nam
+      quod reprehenderit, doloremque molestias autem eius distinctio aliquam
+      itaque laudantium?
+    </p>
+    <form onsubmit="event.preventDefault(); enviarFormulario();">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required /><br />
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required /><br />
+
+      <label for="username">UserName:</label>
+      <input type="text" id="username" name="username" required /><br />
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required /><br />
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required /><br />
+
+      <input type="submit" value="Enviar" />
+    </form>
+    <div class="gallery">
+      <img src="descarga.jpg" alt="Imagen 1" />
+      <img src="Grib_skov.jpg" alt="Imagen 2" />
+      <img src="largest-desert-world.jpg" alt="Imagen 3" />
+      <!-- Agrega más imágenes aquí -->
+    </div>
+  </body>
+</html>
